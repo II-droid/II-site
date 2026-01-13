@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Remplir la sélection d'utilisateurs
   users.forEach(u => {
-    userSelect.innerHTML += `<option value="${u.id}">${u.prenom} ${u.nom}</option>`;
+    userSelect.innerHTML += `<option value="${u.id}">${u.nom} ${u.prenom}</option>`;
   });
 
   // Créer les boutons produits
@@ -118,3 +118,4 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   renderProducts();
 });
+

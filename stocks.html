@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Stocks</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Gestion des stocks</h1>
+  <a href="app.html">← Retour au dashboard</a>
+</header>
+<nav>
+  <ul>
+    <li><a href="app.html">Accueil</a></li>
+    <li><a href="stocks.html">Stocks</a></li>
+    <li><a href="edit.html">Édition</a></li>
+    <li><a href="consume.html">Consommations</a></li>
+	<button id="logout-btn">Déconnexion</button>
+  </ul>
+</nav>
+<main>
+  <section>
+    <h2>Liste des produits</h2>
+    <ul id="stock-list"></ul>
+  </section>
+
+  <section>
+    <h3>Ajouter un produit</h3>
+    <form id="stock-form">
+      <input type="text" name="name" placeholder="Nom du produit" required />
+      <input type="number" name="price" placeholder="Prix (€)" step="0.01" required />
+      <input type="number" name="quantity" placeholder="Quantité" required />
+      <button type="submit">Ajouter</button>
+    </form>
+  </section>
+</main>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/stocks.js"></script>
+
+</body>
+</html>

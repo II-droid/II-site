@@ -1,0 +1,241 @@
+/* ==========================
+   Variables couleurs
+========================== */
+:root {
+  --primary: #1D4ED8; /* bleu roi */
+  --primary-hover: #2563EB;
+  --bg: #F9FAFB;
+  --text: #111827;
+  --text-light: #6B7280;
+  --border: #D1D5DB;
+  --danger: #EF4444;
+}
+
+/* ==========================
+   Reset / Base
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================
+   Header
+========================== */
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header button, header a {
+  background-color: white;
+  color: var(--primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+header button:hover, header a:hover {
+  background-color: #E0E7FF;
+}
+
+/* ==========================
+   Menu / nav
+========================== */
+nav {
+  background-color: white;
+  border-bottom: 1px solid var(--border);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0.5rem 2rem;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* ==========================
+   Main
+========================== */
+main {
+  padding: 2rem;
+}
+
+h2, h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+/* ==========================
+   Tables
+========================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+
+}
+
+th {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+tr:hover {
+  background-color: #F3F4F6;
+}
+
+/* ==========================
+   Formulaires
+========================== */
+form {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(29,78,216,0.2);
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button.danger {
+  background-color: var(--danger);
+}
+
+button.danger:hover {
+  background-color: #DC2626;
+}
+
+/* ==========================
+   Listes
+========================== */
+ul {
+  list-style: none;
+}
+
+ul li {
+  background-color: white;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+ul li input {
+  width: 100px;
+  margin-right: 0.5rem;
+}
+
+/* ==========================
+   Messages / Erreurs
+========================== */
+#error {
+  color: var(--danger);
+  margin-top: 0.5rem;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-bottom: 0.5rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header button, header a {
+    margin-top: 0.5rem;
+  }
+}

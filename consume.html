@@ -2,31 +2,48 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Consommer</title>
+  <title>Consommation</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/consume.css">
 </head>
+<body>
+
+<header>
+  <h1>Consommations</h1>
+  <button onclick="logout()">Déconnexion</button>
+</header>
+
 <nav>
   <ul>
     <li><a href="app.html">Accueil</a></li>
     <li><a href="stocks.html">Stocks</a></li>
     <li><a href="edit.html">Édition</a></li>
     <li><a href="consume.html">Consommations</a></li>
-	<button id="logout-btn">Déconnexion</button>
   </ul>
 </nav>
-<body>
 
-<h1>Consommations</h1>
+<main class="consume-layout">
 
-<select id="user"></select>
+  <!-- PRODUITS -->
+  <section class="products-panel">
+    <h2>Produits</h2>
+    <div id="products" class="products-grid"></div>
+  </section>
 
-<div id="products"></div>
+  <!-- PANIER -->
+  <section class="cart-panel">
+    <h2>Consommation</h2>
 
-<h3>Consommation</h3>
-<ul id="cart"></ul>
+    <select id="user">
+      <option value="">Sélectionner une personne</option>
+    </select>
 
-<button id="confirm">Valider consommation</button>
+    <ul id="cart" class="cart-list"></ul>
 
+    <button id="confirm" class="confirm-btn">Confirmer</button>
+  </section>
+
+</main>
 
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 <script src="assets/js/supabase.js"></script>

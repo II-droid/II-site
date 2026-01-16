@@ -56,10 +56,11 @@ header button, header a {
   background-color: white;
   color: var(--primary);
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
 }
 
 header button:hover, header a:hover {
